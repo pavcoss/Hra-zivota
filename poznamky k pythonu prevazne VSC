@@ -1,0 +1,59 @@
+#funguje na stylu proměných
+pozdrav = "ahoj svete"
+print(pozdrav)
+
+#"py -3 --version" ukáže verzi pythonu
+#"py" přemeni na python terminal (python "REPL" = Read-Evaluate-Print-Loop)
+#když chci odejít z REPL = quit()
+#když napisu do prikazaku py (název souboru + .py) tak to spusti ten dany soubor
+
+#promena muze byt cokoliv korme interpunkce a cisel
+#promene muzeme zapisovat do terminalu viz: jmeno = "Pavel"
+#kdyz napisu jmeno vypise to promenou
+#pismena = string
+# Shit + Alt + šípka dolů kopíruje text
+# Shit + Alt + šípka dolů kopíruje text
+# Shit + Alt + šípka dolů kopíruje text
+# Shit + Alt + šípka dolů kopíruje text
+
+#python je citlvivy na  mezery ale kdyz zmacknu Ctr + S (ulozeni samo se to opravi (kdyz je nainstalovana extence) )
+#python se da v REPL pouzivat jako kalkulacka
+# // = "výsledek v celem cisle bez desetin setin apod"
+# // = %
+#round() = zaokrouhlování 
+# nebo pres promenou    number = (promena)
+                        #rounded_number=round(number,"cislo na kolik míst")
+                        #print("neajky text",rounded_number,")
+
+#promena += jakekoliv cislo = prida k promene tu hodnotu pokud je to cislo plati pro jakekoliv znamenko
+# promene se muzou scitat i v textu viz name "Pavel" + " Šolc"
+# muzem porovnavatr cisla  treba 34 == 2
+# jestli neni rovno !=
+# mensi/vetsi nebo rovno <= >=
+# not = opak př (x = True) (not x (to pak vyprdne false))
+# and = zkoukne na prvni promenou a pokud je prvni promena true az pak se to koukne na druhou 
+# (x = true   y = false) kdyz je prvni v "and" true jde dal kdyz false konci to v false
+# "or" se podiva na druhou promenou pouze kdyz je ta prvni False
+# kdyz je if tak nezapomenout na ":"
+# za else hned ":"
+# kdyz mam kod a zvyraznim ho a zmacku Ctrl + / da se to do poznamky
+
+#print(type(fist)) = vypise typ promene
+#print(isinstance(fist, str)) = vypise true nebo false
+#Ctrl + D = kdyz zvyraznim text a zmacknu Ctrl + D tak se mi oznaci dalsi stejny text
+#promenou muzem definovat i pres vice promenych viz: fullname = fist + " " + last
+#fullname += "!" = prida k promene "!"
+#decade = str(1980) = pretypuje cislo na text, coz se hodi kdyz chci spojit text s cislem
+#multiline = """ = vypise text na vice radku, a mezi 3ma "" dam enter a jsem ready 
+#sentence = "I\"m back at work!\tHey!\n\nWhere\"s this at\\located?" = vypise text s unikovymi znaky coz se znaci "\"
+#\t = tabulator
+#\n = novy radek
+#\ = unikovy znak
+#\ = alt gr + q
+#proměná.lower() = prevede text na mala pismena
+#proměná.upper() = prevede text na velka pismena
+#proměná.title() = prevede text na velka pismena na zacatku kazdeho slova
+#proměná.replace("good", "ok") = nahradí slovo "good" za slovo "ok"
+#len(proměná) = vypíše delku textu
+
+#55:59

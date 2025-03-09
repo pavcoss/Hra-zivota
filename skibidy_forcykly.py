@@ -75,5 +75,5 @@
 #     if hadane_cislo == nahodne_cislo:
 #         print("Bezva uhodl jsi mé číslo. Uhodl jsi ho na" ,pokusy, "pokusů")
 #         print("Dobrá Práce :-)")
-#         breakS
+#         break
 

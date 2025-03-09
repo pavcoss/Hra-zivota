@@ -13,93 +13,72 @@ def odstran_hacky_carky(text):
         'š': 's', 'ś': 's',
         'ď': 'd', 'đ': 'd',
         'ľ': 'l', 'ĺ': 'l',
-        'ř': 'r', 'ť': 't',
-        'ď': 'd', 'ť': 't', 'ľ': 'l',
-        'ž': 'z'
+        'ř': 'r', 'ť': 't'
     }
-
     for key, value in diakritika.items():
         text = text.replace(key, value)
-
     return text
 
-start = input("Chceš si zahrát? ano či ne?: ")
-oblibensot_kluci = 0
-oblibenost_holky = 0
-oblinost_rodice = 10
-oblibentst_dospeli = 0
+# Inicializace oblíbenosti
+oblibenost = {
+    "kluci": 0,
+    "holky": 0,
+    "rodice": 10,
+    "dospeli": 0
+}
 
-
-# Odstranění diakritiky (háčků a čárek)
-start = odstran_hacky_carky(start)
-
-# Odstranění diakritiky pro pohlaví
-pohlavi = input("Jaký jsi pohlaví? Muž či žena?: ")
-pohlavi = odstran_hacky_carky(pohlavi)
-
-if pohlavi.lower() not in ["muz", "zena"]:
-    print("Jsou jen dvě pohlaví.")
-else:
-    if start.lower() in ["ano", "a"]:
-        print("Nacházíme se v roce 2009 a právě ses narodil")
-        jmeno = input("Zadej své jméno: ")
-        prijmeni = input("Zadej své příjmení: ")
-        cele_jmeno = jmeno + " " + prijmeni
-
-        print("Přeskočím 3 roky a jsi momentálně ve školce.")
-        print("Máš na výběr ze 3 hraček")
-        
-        hracky = ["autíčka", "panenky", "lego"]
-        print(hracky)
-        
-        vyber_hracky = input("Jakou hračku si vybereš?: ")
-        vyber_hracky = odstran_hacky_carky(vyber_hracky)
-
-      
-      
-        if vyber_hracky.lower() == "auticka":
-            print("Vybral jsi si autíčka.")
-
-            if pohlavi.lower() == "zena":
-                print("Jelikož sis vybrala autíčka tak se budeš spíše bavit s klukama a budeš mít náklonost k autům ") 
-                oblibensot_kluci += 6
-                oblibenost_holky -= 4
-
-                
-            if pohlavi.lower() == "muz":
-                print("našel sis kámoše a teď spolu děláte závody , budeš mít náklonost k autům ")   
-
-                oblibensot_kluci += 3
-                   
-
-        if vyber_hracky.lower() == "panenky":
-            print("Vybral jsi si panenky.")
-
-
-            if pohlavi.lower() == "zena":
-              print("Jelikož sis vybrala panenky tak se budeš spíše bavit s holkama a budeš slay queen")
-            oblibenost_holky += 3
-            
-            
-
-            if pohlavi.lower() == "muz":
-                print("Vybral sis panenky, takže se budeš bavit s holkama a budeš material gworl")
-                oblibenost_holky += 6
-                oblibensot_kluci -= 5
-
-        
-        if vyber_hracky.lower() == "lego":
-            print("Vybral jsi si lego.")
-        
-            if pohlavi.lower() == "zena":
-                print("Jelikož sis vybrala lego tak budeš velmi kreativní a inteligentní")
-                oblibenost_holky += 2
-                oblibensot_kluci += 2
-            
-            if pohlavi.lower() == "muz":
-                print("Vybral sis lego, takže budeš velmi kreativní a tvoje oblíbené lego bude ninjago")
-                oblibenost_holky += 2
-                oblibensot_kluci += 2
-
+# Zahájení hry
+start = odstran_hacky_carky(input("Chceš si zahrát? ano či ne?: ").lower())
+if start in ["ano", "a"]:
+    
+    pohlavi = odstran_hacky_carky(input("Jaký jsi pohlaví? Muž či žena?: ").lower())
+    
+    if pohlavi not in ["muz", "zena"]:
+        print("Jsou jen dvě pohlaví.")
     else:
-        print("Škoda, možná jindy.")
+        print("Nacházíme se v roce 2009 a právě ses narodil")       
+        cele_jmeno = input("Zadej své jméno: ") + " " + input("Zadej své příjmení: ")
+        print("Přeskočím 3 roky a jsi momentálně ve školce.")
+        
+        # Výběr hraček
+        hracky = {"auticka": "Autíčka", "panenky": "Panenky", "lego": "Lego"}
+        print("Máš na výběr ze 3 hraček:", list(hracky.values()))
+        
+        while True:
+            vyber_hracky = odstran_hacky_carky(input("Jakou hračku si vybereš?: ").lower())
+            if vyber_hracky in hracky:
+                print(f"Vybral jsi si {hracky[vyber_hracky]}.")
+                break
+            else:
+                print("Neplatná volba, zkus to znovu.")
+
+        # Nastavení oblíbenosti
+        if vyber_hracky == "auticka":
+            oblibenost["kluci"] += 6 if pohlavi == "zena" else 3
+            oblibenost["holky"] -= 4 if pohlavi == "zena" else 0
+            print("Máš náklonost k autům a kamarádíš se s kluky.")
+
+
+        elif vyber_hracky == "panenky":
+            oblibenost["holky"] += 3 if pohlavi == "zena" else 6
+            oblibenost["kluci"] -= 5 if pohlavi == "muz" else 0
+            print("Máš náklonost k holkám a jsi slay queen/material gworl.")
+
+
+        elif vyber_hracky == "lego":
+            oblibenost["holky"] += 2
+            oblibenost["kluci"] += 2
+            print("Budeš velmi kreativní a inteligentní.")
+
+
+
+
+
+
+
+
+
+
+
+else:
+    print("Nevadzi")

@@ -1,6 +1,6 @@
-# # for i in range(2):
-# #     print("Ťuk")
-# # print("Kdo Tam")
+# # for i in range(3):
+# #     print("Knock")
+# # print("Penny!")
 
 
 # # for i in range(1, 31):

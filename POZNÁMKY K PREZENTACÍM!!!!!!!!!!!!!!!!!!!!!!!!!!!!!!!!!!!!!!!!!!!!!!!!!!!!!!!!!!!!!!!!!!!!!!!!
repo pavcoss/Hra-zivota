@@ -1,1 +1,33 @@
+Prezentace!!
 
+
+
+
+
+Seznamy:
+Seznam se tvoří:
+
+sezanm = ["Aleicv", 4, True]
+print(sezanm)
+print(seznam[0]) -----> output = Ahoj #python indexuje od 0
+
+
+#přidání nového prvku
+seznam.append(4) -----> na konec seznam se přidá 4
+
+#změma hodnoty
+seznam[2] = 15
+
+#vymazání prvku 
+seznam.remove("Aleicv) ----------> odstrani "Aleicv
+
+karel = {}
+seznam = []
+
+
+seznam.append(skibidi)
+
+na pythonu jede ig yt meta aplikace
+
+forcyklus = "opakuje kroky"    range(1, 101)
+whilecyklus = opakuj dokud False kdyý blbě ukončení tak se objeví šmoula a to nechceš

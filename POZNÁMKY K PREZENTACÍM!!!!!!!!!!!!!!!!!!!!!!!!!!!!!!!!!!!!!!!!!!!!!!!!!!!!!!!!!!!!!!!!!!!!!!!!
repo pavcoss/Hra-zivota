@@ -1,36 +1,127 @@
-Prezentace!!
+Prezentace!! 
 
+*Seznamy: 
+Seznam se tvoří:  
 
+seznam = ["Ahoj", 4, True]
+print(seznam)
+print(seznam[0])  # -----> output = Ahoj (Python indexuje od 0)
 
-
-
-Seznamy:
-Seznam se tvoří:
-
-sezanm = ["Aleicv", 4, True]
-print(sezanm)
-print(seznam[0]) -----> output = Ahoj #python indexuje od 0
-
-
-#přidání nového prvku
-seznam.append(4) -----> na konec seznam se přidá 4
-
-#změma hodnoty
+Přidání nového prvku:
+  
+  seznam.append(4)  # -----> na konec seznamu se přidá 4
+  
+Změna hodnoty:
+  
 seznam[2] = 15
+  
+Vymazání prvku: 
 
-#vymazání prvku 
-seznam.remove("Aleicv) ----------> odstrani "Aleicv
+seznam.remove("Ahoj")  # -----> odstraní "Ahoj"
+  
 
-karel = {}
-seznam = []
+Prázdné struktury:  
+
+karel = {}   # prázdný slovník  
+seznam = []  # prázdný seznam  
 
 
-seznam.append(skibidi)
+Přidání proměnné do seznamu:
+  
+  seznam.append(skibidi)
+  
 
-na pythonu jede ig yt meta aplikace
 
-forcyklus = "opakuje kroky"    range(1, 101)
-whilecyklus = opakuj dokud False kdyý blbě ukončení tak se objeví šmoula a to nechceš
+
+For cyklus:  
+"Opakuje kroky"  
+
+Základní syntaxe:
+
+for prvek in sekvence:
+    print(prvek)
+
+
+Funkce `range()  
+
+range(začátek, konec, krok)
+#         nepovinný  povinný   nepovinný  
+#         parametr  poslední   
+#         vždy 0    číslo se nepočítá (n-1)
+
+
+Příklad:  
+for i in range(1, 10, 2):  
+    print(i)  # -----> 1, 3, 5, 7, 9
+
+While cyklus:
+"Opakuj, dokud není False."  
+Pozor na špatné ukončení → nekonečný cyklus= objeví se šmoula v kompu (to nechceš).  
+
+x = 0
+while x < 5:
+    print(x)
+    x += 1
+
+
+ Datové typy:  
+- `int` → `x = 10`  (celé číslo)  
+- `float` → `y = 3.14`  (desetinné číslo)  
+- `str` → `z = "Hello"`  (řetězec)  
+- `bool` → `b = True`  (pravda/nepravda)  
+- `list` → `l = [1, 2, 3]`  (seznam)  
+- `tuple` → `t = (1, 2, 3)`  (neměnitelný seznam)  
+- `dict` → `d = {"klíč": "hodnota"}`  (slovník)  
+
+
+Slovník v Pythonu
+Slovník obsahuje klíč-hodnota páry.  
+
+Vytvoření slovníku:  
+
+slov_př = {
+    "jméno": "Karel",
+    "věk": 25,
+    "město": "Praha"
+}
+print(slov_př["jméno"])  # -----> output = Karel
+
+
+- Přidání nového klíče-hodnoty: 
+  
+  slov_př["povolání"] = "Programátor"
+  
+- Změna hodnoty: 
+  
+  slov_př["věk"] = 26
+
+
+- Odstranění klíče: 
+  
+  del slov_př["město"]
+
+
+  
+- Iterace přes slovník: 
+  
+  for klic, hodnota in slov_př.items():
+      print(klic, "->", hodnota)
+  
+
+
+
+
+Na Pythonu běží:
+ Instagram  
+ YouTube  
+ Meta aplikace  
+
+
+
+
+
+
+
 
 
 
